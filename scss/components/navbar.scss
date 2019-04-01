@@ -1,0 +1,17 @@
+
+.navbar-item {
+  &.is-cart {
+    @include tablet {
+      .icon {
+        font-size: 1.35rem;
+      }
+
+      .count {
+        color: $primary;
+        margin-left: 0.5rem;
+        font-family: $family-primary;
+        font-weight: bold;
+      }
+    }
+  }
+}
