@@ -2,6 +2,8 @@
  * WooCommerce CSS Variables
  */
 
+$small: 576px !default;
+
 $woocommerce-color: #a46497 !default;
 $woocommerce-green-color: $success !default;
 $woocommerce-red-color: $danger !default;
@@ -33,7 +35,11 @@ $woocommerce-col2set-grid-gap: 2rem !default;
 
 $woocommerce-products-grid-gap: 2rem !default;
 
+//$woocommerce-border-default: 1px solid rgba(0, 0, 0, 0.1) !default;
+$woocommerce-border-default: 1px solid $grey-lighter !default;
 
 $woocommerce-box-border-color: $white-bis !default;
+
+$woocommerce-smallscreen-breakpoint: $small !default;
 
 
