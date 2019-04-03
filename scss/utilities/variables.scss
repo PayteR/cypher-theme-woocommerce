@@ -2,20 +2,38 @@
  * WooCommerce CSS Variables
  */
 
-$woocommerce:   	#a46497 !default;
-$green:         	$success !default;
-$red:           	$danger !default;
-$orange:        	$warning !default;
-$blue:          	$info !default;
+$woocommerce-color: #a46497 !default;
+$woocommerce-green-color: $success !default;
+$woocommerce-red-color: $danger !default;
+$woocommerce-orange-color: $warning !default;
+$woocommerce-blue-color: $info !default;
 
-$primary:           #a46497 !default;                           // Primary color for buttons (alt)
-$primarytext:       desaturate(lighten($primary, 50%), 18%) !default;   // Text on primary color bg
+$woocommerce-primary-color: $primary !default; // Primary color for buttons (alt)
+$woocommerce-primarytext-color: $white !default; // Text on primary color bg
 
-$secondary:         desaturate(lighten($primary, 40%), 21%) !default; // Secondary buttons
-$secondarytext:     desaturate(darken($secondary, 60%), 21%) !default;   // Text on secondary color bg
+$woocommerce-secondary-color: $woocommerce-primary-color !default; // Secondary buttons
+$woocommerce-secondarytext-color: $white !default; // Text on secondary color bg
 
-$highlight:         adjust-hue($primary, 150deg) !default;               // Prices, In stock labels, sales flash
-$highlightext:      desaturate(lighten($highlight, 50%), 18%) !default;  // Text on highlight color bg
 
-$contentbg:         $white !default;                                       // Content BG - Tabs (active state)
-$subtext:           $grey !default;                                       // small, breadcrumbs etc
+$woocommerce-content-background-color: $white !default; // Content BG - Tabs (active state)
+$woocommerce-subtext-color: $body-color !default; // small, breadcrumbs etc
+
+$woocommerce-highlight-color: $primary !default;
+
+$woocommerce-onsale-background-color: $woocommerce-primary-color !default;
+$woocommerce-onsale-color: #fff !default;
+$woocommerce-onsale-size: 4em;
+$woocommerce-onsale-font-size: .9em;
+
+$woocommerce-star-visible-color: $primary !default;
+$woocommerce-star-background-color: $grey !default;
+
+
+$woocommerce-col2set-grid-gap: 2rem !default;
+
+$woocommerce-products-grid-gap: 2rem !default;
+
+
+$woocommerce-box-border-color: $white-bis !default;
+
+

@@ -1,17 +1,45 @@
+$navbar-cart-breakpoint: $tablet !default;
+$navbar-cart-icon-size: 1.35rem !default;
 
-.navbar-item {
+.navbar {
   &.is-cart {
-    @include tablet {
-      .icon {
-        font-size: 1.35rem;
-      }
-
-      .count {
-        color: $primary;
-        margin-left: 0.5rem;
-        font-family: $family-primary;
-        font-weight: bold;
-      }
+    .navbar-burger {
+      margin-left: initial;
     }
   }
 }
+
+.navbar-cart {
+  align-items: stretch;
+  display: none;
+  @include until($navbar-cart-breakpoint) {
+    &.is-mobile {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+  @include from($navbar-cart-breakpoint) {
+    &.is-desktop {
+      display: flex;
+    }
+  }
+}
+
+.navbar-cart {
+  .navbar-dropdown {
+    padding: $spacer;
+  }
+}
+
+.navbar-cart-icon {
+  font-size: $navbar-cart-icon-size;
+}
+
+.navbar-cart-count {
+  color: $woocommerce-primary-color;
+  margin-left: 0.5rem;
+  font-family: $family-primary;
+  font-weight: bold;
+}
+
+

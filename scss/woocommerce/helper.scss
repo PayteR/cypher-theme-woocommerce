@@ -19,8 +19,8 @@ $woo_pink2: #bb77ae !default;
 
 
 $color_text_blue: #0073aa !default;
-$color_button_primary: $primary !default;
-$color_button_secondary: $secondary !default;
+$color_button_primary: $woocommerce-primary-color !default;
+$color_button_secondary: $woocommerce-secondary-color !default;
 
 /*------------------------------------------------------------------------------
   Tab navigation
@@ -856,7 +856,7 @@ $color_button_secondary: $secondary !default;
 
 	.start-container {
 		background-color: $white;
-		border-left: 4px solid $primary;
+		border-left: 4px solid $woocommerce-primary-color;
 		padding: 45px 20px 20px 30px;
 		position: relative;
 		overflow: hidden;
