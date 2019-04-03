@@ -200,12 +200,12 @@
 			clear: right;
 			float: right;
 
-			.col2-set {
-				.col-1,
-				.col-2 {
-					width: 47%;
-				}
-			}
+			//.col2-set {
+			//	.col-1,
+			//	.col-2 {
+			//		width: 47%;
+			//	}
+			//}
 		}
 
 		.cart_totals {
@@ -229,7 +229,7 @@
 	 */
 	form {
 		.form-row {
-			@include clearfix();
+			//@include clearfix();
 
 			label {
 				display: block;
@@ -239,60 +239,55 @@
 				}
 			}
 
-			select {
-				width: 100%;
-			}
-
-			.input-text {
-				box-sizing: border-box;
-				width: 100%;
-			}
+			//select {
+			//	width: 100%;
+			//}
+      //
+			//.input-text {
+			//	box-sizing: border-box;
+			//	width: 100%;
+			//}
 		}
 
-		.form-row-first,
-		.form-row-last {
-			width: 47%;
-			overflow: visible;
-		}
+		//.form-row-first,
+		//.form-row-last {
+		//	width: 47%;
+		//	overflow: visible;
+		//}
 
 		.form-row-first {
-			float: left;
+			//float: left;
 
 			/*rtl:raw:
 			float: right;
 			*/
 		}
 
-		.form-row-last {
-			float: right;
-		}
-
-		.form-row-wide {
-			clear: both;
-		}
+		//.form-row-last {
+		//	float: right;
+		//}
+    //
+		//.form-row-wide {
+		//	clear: both;
+		//}
 	}
 
 	#payment {
-		.form-row {
-			select {
-				width: auto;
-			}
-		}
+		//.form-row {
+		//	select {
+		//		width: auto;
+		//	}
+		//}
 
 		.wc-terms-and-conditions, .terms {
 			text-align: left;
 			padding: 0 1em 0 0;
-			float:left;
+			//float:left;
 		}
 
 		#place_order {
-			float: right;
+			//float: right;
 		}
-	}
-
-	.woocommerce-billing-fields,
-	.woocommerce-shipping-fields {
-		@include clearfix();
 	}
 
 	.woocommerce-terms-and-conditions {
@@ -321,203 +316,53 @@
 }
 
 /**
- * Twenty Eleven specific styles
+  Custom added styles
  */
-.woocommerce-page {
-	&.left-sidebar {
-		#content.twentyeleven {
-			width: 58.4%;
-			margin: 0 7.6%;
-			float: right;
-		}
-	}
 
-	&.right-sidebar {
-		#content.twentyeleven {
-			margin: 0 7.6%;
-			width: 58.4%;
-			float: left;
-		}
-	}
+.woocommerce-billing-fields__field-wrapper {
+  display: grid;
+  grid-gap: $woocommerce-forms-grid-gap;
+  grid-template-columns: repeat(12, 1fr);
+  margin-bottom: 1rem;
+  grid-auto-flow: dense;
+
+  .form-row {
+    grid-column: span 12;
+  }
 }
 
-/**
- * Twenty Fourteen specific styles
- */
-.twentyfourteen {
-	.tfwc {
-		padding: 12px 10px 0;
-		max-width: 474px;
-		margin: 0 auto;
+@include from($woocommerce-smallscreen-breakpoint) {
+  #billing_first_name_field {
+    grid-column: span 6;
+  }
 
-		.product .entry-summary {
-			padding: 0 !important;
-			margin: 0 0 1.618em !important;
-		}
+  #billing_last_name_field {
+    grid-column: span 6;
+  }
 
-		div.product.hentry.has-post-thumbnail {
-			margin-top: 0;
-		}
-	}
+  #billing_postcode_field {
+    grid-column: span 4;
+  }
+
+  #billing_city_field {
+    grid-column: span 8;
+  }
+
+  #billing_phone_field {
+    grid-column: 7 / -1;
+  }
+
+  #billing_email_field {
+    grid-column: 1 / 7;
+  }
 }
 
-@media screen and (min-width: 673px) {
-	.twentyfourteen {
-		.tfwc {
-			padding-right: 30px;
-			padding-left: 30px;
-		}
-	}
-}
-
-@media screen and (min-width: 1040px) {
-	.twentyfourteen {
-		.tfwc {
-			padding-right: 15px;
-			padding-left: 15px;
-		}
-	}
-}
-
-@media screen and (min-width: 1110px) {
-	.twentyfourteen {
-		.tfwc {
-			padding-right: 30px;
-			padding-left: 30px;
-		}
-	}
-}
-
-@media screen and (min-width: 1218px) {
-	.twentyfourteen {
-		.tfwc {
-			margin-right: 54px;
-		}
-	}
-	.full-width {
-		.twentyfourteen {
-			.tfwc {
-				margin-right: auto;
-			}
-		}
-	}
-}
-
-/**
- * Twenty Fifteen specific styles
- */
-.twentyfifteen {
-	.t15wc {
-		padding-left: 7.6923%;
-		padding-right: 7.6923%;
-		padding-top: 7.6923%;
-		margin-bottom: 7.6923%;
-		background: $white;
-		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
-
-		.page-title {
-			margin-left: 0;
-		}
-	}
-}
-
-@media screen and (min-width: 38.75em) {
-	.twentyfifteen {
-		.t15wc {
-			margin-right: 7.6923%;
-			margin-left: 7.6923%;
-			margin-top: 8.3333%;
-		}
-	}
-}
-
-@media screen and (min-width: 59.6875em) {
-	.twentyfifteen {
-		.t15wc {
-			margin-left: 8.3333%;
-			margin-right: 8.3333%;
-			padding: 10%;
-		}
-	}
-
-	.single-product {
-		.twentyfifteen {
-			.entry-summary {
-				padding: 0 !important;
-			}
-		}
-	}
-}
-
-/**
- * Twenty Sixteen specific styles
- */
-.twentysixteen {
-	.site-main {
-		margin-right: 7.6923%;
-		margin-left: 7.6923%;
-	}
-
-	.entry-summary {
-		margin-right: 0;
-		margin-left: 0;
-	}
-}
-
-#content {
-	.twentysixteen {
-		div.product {
-			div.images,
-			div.summary {
-				width: 46.42857%;
-			}
-		}
-	}
-}
-
-@media screen and (min-width: 44.375em) {
-	.twentysixteen {
-		.site-main {
-			margin-right: 23.0769%;
-		}
-	}
-}
-
-@media screen and (min-width: 56.875em) {
-	.twentysixteen {
-		.site-main {
-			margin-right: 0;
-			margin-left: 0;
-		}
-	}
-
-	.no-sidebar {
-		.twentysixteen {
-			.site-main {
-				margin-right: 15%;
-				margin-left: 15%;
-			}
-
-			.entry-summary {
-				margin-right: 0;
-				margin-left: 0;
-			}
-		}
-	}
-}
 
 /**
  * RTL styles.
  */
 .rtl {
 	.woocommerce, .woocommerce-page {
-		.col2-set {
-			.col-1 {
-				float: right;
-			}
-			.col-2 {
-				float: left;
-			}
-		}
+    direction: rtl;
 	}
 }

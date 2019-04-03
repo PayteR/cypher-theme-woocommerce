@@ -135,14 +135,14 @@
     /**
        * Product Details
        */
-    div.product,
-    #content div.product {
-      div.images,
-      div.summary {
-        float: none;
-        width: 100%;
-      }
-    }
+    //div.product,
+    //#content div.product {
+    //  div.images,
+    //  div.summary {
+    //    float: none;
+    //    width: 100%;
+    //  }
+    //}
 
     /**
        * Cart
@@ -181,60 +181,60 @@
       }
     }
 
-    .cart-collaterals {
-      .cart_totals,
-      .shipping_calculator,
-      .cross-sells {
-        width: 100%;
-        float: none;
-        text-align: left;
-      }
-    }
+    //.cart-collaterals {
+    //  .cart_totals,
+    //  .shipping_calculator,
+    //  .cross-sells {
+    //    width: 100%;
+    //    float: none;
+    //    text-align: left;
+    //  }
+    //}
 
     /**
        * Checkout
        */
-    &.woocommerce-checkout {
-      form.login {
-        .form-row {
-          width: 100%;
-          float: none;
-        }
-      }
-    }
+    //&.woocommerce-checkout {
+    //  form.login {
+    //    .form-row {
+    //      width: 100%;
+    //      float: none;
+    //    }
+    //  }
+    //}
 
-    #payment {
-      .terms {
-        text-align: left;
-        padding: 0;
-      }
-
-      #place_order {
-        float: none;
-        width: 100%;
-        box-sizing: border-box;
-        margin-bottom: 1em;
-      }
-    }
+    //#payment {
+    //  .terms {
+    //    text-align: left;
+    //    padding: 0;
+    //  }
+    //
+    //  #place_order {
+    //    float: none;
+    //    width: 100%;
+    //    box-sizing: border-box;
+    //    margin-bottom: 1em;
+    //  }
+    //}
 
     /**
        * Account
        */
-    .lost_reset_password {
-      .form-row-first,
-      .form-row-last {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-      }
-    }
+    //.lost_reset_password {
+    //  .form-row-first,
+    //  .form-row-last {
+    //    width: 100%;
+    //    float: none;
+    //    margin-right: 0;
+    //  }
+    //}
   }
 
-  .woocommerce-account {
-    .woocommerce-MyAccount-navigation,
-    .woocommerce-MyAccount-content {
-      float: none;
-      width: 100%;
-    }
-  }
+  //.woocommerce-account {
+  //  .woocommerce-MyAccount-navigation,
+  //  .woocommerce-MyAccount-content {
+  //    float: none;
+  //    width: 100%;
+  //  }
+  //}
 }
