@@ -6,7 +6,9 @@
 /**
  * Styling begins
  */
-.woocommerce, .woocommerce-page {
+.woocommerce
+//.woocommerce-page
+{
 
 	.woocommerce-message,
 	.woocommerce-error,
@@ -136,7 +138,7 @@
 		float: left;
 	}
 	.woocommerce-ordering {
-    @extend .select;
+    @extend .select !optional;
 		float: right;
 	}
 
@@ -286,7 +288,7 @@
 		}
 
 		#place_order {
-			//float: right;
+      margin-top: 1rem;
 		}
 	}
 
@@ -319,6 +321,7 @@
   Custom added styles
  */
 
+.woocommerce-shipping-fields__field-wrapper,
 .woocommerce-billing-fields__field-wrapper {
   display: grid;
   grid-gap: $woocommerce-forms-grid-gap;
@@ -332,27 +335,33 @@
 }
 
 @include from($woocommerce-smallscreen-breakpoint) {
-  #billing_first_name_field {
+  #billing_first_name_field,
+  #shipping_first_name_field {
     grid-column: span 6;
   }
 
-  #billing_last_name_field {
+  #billing_last_name_field,
+  #shipping_last_name_field {
     grid-column: span 6;
   }
 
-  #billing_postcode_field {
+  #billing_postcode_field,
+  #shipping_postcode_field {
     grid-column: span 4;
   }
 
-  #billing_city_field {
+  #billing_city_field,
+  #shipping_city_field {
     grid-column: span 8;
   }
 
-  #billing_phone_field {
+  #billing_phone_field,
+  #shipping_phone_field {
     grid-column: 7 / -1;
   }
 
-  #billing_email_field {
+  #billing_email_field,
+  #shipping_email_field {
     grid-column: 1 / 7;
   }
 }
@@ -362,7 +371,9 @@
  * RTL styles.
  */
 .rtl {
-	.woocommerce, .woocommerce-page {
+	.woocommerce
+  //.woocommerce-page
+  {
     direction: rtl;
 	}
 }

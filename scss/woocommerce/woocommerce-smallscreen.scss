@@ -7,8 +7,9 @@
   /**
  * Style begins
  */
-  .woocommerce,
-  .woocommerce-page {
+  .woocommerce
+  //.woocommerce-page  // maybe uncomment later
+  {
 
     table.shop_table_responsive {
       thead {
@@ -51,37 +52,10 @@
       }
 
       tr {
-        //display: block;
-
         td {
-          //display: block;
           border-top: 0;
           border-bottom: 0;
-      //    text-align: right !important; // Important to overwrite order status inline styling
-      //
-      //    &.order-actions {
-      //      text-align: left !important; // This must always align left on handheld
-      //    }
-      //
-      //    &::before {
-      //      content: attr(data-title) ': ';
-      //      font-weight: $weight-bold;
-      //      float: left;
-      //    }
-      //
-      //    &.product-remove,
-      //    &.actions {
-      //      &::before {
-      //        display: none;
-      //      }
-      //    }
         }
-      //
-      //  &:nth-child( 2n ) {
-      //    td {
-      //      background-color: rgba(0, 0, 0, 0.025);
-      //    }
-      //  }
       }
     }
 
@@ -118,6 +92,19 @@
     /**
        * Products
        */
+    ul.products {
+      li.product {
+        text-align: center;
+        .attachment-woocommerce_thumbnail {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .star-rating {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
     //ul.products[class*='columns-'] {
     //  li.product {
     //    width: 48%;
@@ -175,21 +162,21 @@
         }
 
         .button {
-          display: block;
+          //display: block;
           width: 100%;
         }
       }
     }
 
-    //.cart-collaterals {
-    //  .cart_totals,
-    //  .shipping_calculator,
-    //  .cross-sells {
-    //    width: 100%;
-    //    float: none;
-    //    text-align: left;
-    //  }
-    //}
+    .cart-collaterals {
+      .cart_totals,
+      .shipping_calculator,
+      .cross-sells {
+        width: 100%;
+        float: none;
+        text-align: left;
+      }
+    }
 
     /**
        * Checkout
