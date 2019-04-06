@@ -320,7 +320,6 @@
 /**
   Custom added styles
  */
-
 .woocommerce-shipping-fields__field-wrapper,
 .woocommerce-billing-fields__field-wrapper {
   display: grid;
@@ -333,6 +332,7 @@
     grid-column: span 12;
   }
 }
+
 
 @include from($woocommerce-smallscreen-breakpoint) {
   #billing_first_name_field,

@@ -1358,12 +1358,47 @@ p.demo_store,
 	form.login,
 	form.checkout_coupon,
 	form.register {
-		border: 1px solid darken($woocommerce-box-border-color, 10%);
-		padding: 20px;
-		margin: 2em 0;
+		border: $woocommerce-border-default;
+		padding: 2em;
+    margin-bottom: 2em;
 		text-align: left;
-		border-radius: 5px;
 	}
+
+
+  form.login {
+    display: grid;
+    grid-gap: $woocommerce-forms-grid-gap;
+    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: 1rem;
+    grid-auto-flow: dense;
+
+    .clear {
+      display: none;
+    }
+
+    .button {
+      vertical-align: middle;
+      margin-right: .5em;
+    }
+
+    > p {
+      grid-column: span 12;
+    }
+
+    .form-row-first,
+    .form-row-last {
+      grid-column: span 6;
+    }
+  }
+
+  form.checkout_coupon {
+    .form-row {
+      float: left;
+    }
+    .form-row-first {
+      margin-right: 1em;
+    }
+  }
 
 	ul#shipping_method {
 		list-style: none outside;
@@ -1813,6 +1848,7 @@ p.demo_store,
       .coupon .input-text {
         float: left;
         min-width: 120px;
+        margin-right: .5em;
       }
     }
 	}
@@ -1916,20 +1952,23 @@ p.demo_store,
 		.col-2 {
 
 			h3#ship-to-different-address {
-				float: left;
-				clear: none;
-        input[type=checkbox] {
-          line-height: .8;
+				//float: left;
+				//clear: none;
+        //input[type=checkbox] {
+        //  line-height: .8;
+        //}
+        .checkbox {
+          line-height: 1;
         }
 			}
-
-			.notes {
-				clear: left;
-			}
-
-			//.form-row-first {
+      //
+			//.notes {
 			//	clear: left;
 			//}
+      //
+			////.form-row-first {
+			////	clear: left;
+			////}
 		}
 
 		.create-account small {
@@ -2115,6 +2154,12 @@ p.demo_store,
 			}
 		}
 	}
+}
+
+.woocommerce-terms-and-conditions-wrapper {
+  > div, p {
+    margin-bottom: 1rem;
+  }
 }
 
 .woocommerce-terms-and-conditions {
