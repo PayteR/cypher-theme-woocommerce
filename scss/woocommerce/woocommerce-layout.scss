@@ -9,6 +9,9 @@
 .woocommerce
 //.woocommerce-page
 {
+  p {
+    margin-bottom: 1rem;
+  }
 
 	.woocommerce-message,
 	.woocommerce-error,
@@ -48,9 +51,19 @@
 	 */
 	div.product,
 	#content div.product {
+    display: grid;
+    grid-gap: $woocommerce-product-grid-gap;
+    @include from($woocommerce-smallscreen-breakpoint) {
+      grid-template-columns: 400px 1fr;
+      grid-template-areas: "images content"
+                           "tabs   tabs";
+    }
+
+
 		div.images {
-			float: left;
-			width: 48%;
+      grid-area: images;
+			//float: left;
+			//width: 48%;
 		}
 
 		div.thumbnails {
@@ -99,13 +112,18 @@
 		}
 
 		div.summary {
-			float: right;
-			width: 48%;
-			clear: none;
+      grid-area: content;
+			//float: right;
+			//width: 48%;
+			//clear: none;
 		}
 
+    .woocommerce-product-details__short-description {
+      @extend .content !optional;
+    }
+
 		.woocommerce-tabs {
-			clear: both;
+      grid-area: tabs;
 
 			ul.tabs {
 				@include menu();
@@ -117,6 +135,8 @@
 				@include mediaright();
 			}
 		}
+
+
 	}
 
 	/**
@@ -308,18 +328,32 @@
 .woocommerce-account {
 	.woocommerce-MyAccount-navigation {
 		float: left;
-		width: 30%;
+		width: $woocommerce-account-sidebar-width;
+
 	}
 
 	.woocommerce-MyAccount-content {
 		float: right;
-		width: 68%;
+		width: calc(100% - #{$woocommerce-account-sidebar-width} - #{$woocommerce-account-gap-width});
+
+    h3 {
+      @extend .title !optional;
+      @extend .title.is-4 !optional;
+    }
 	}
+}
+
+.woocommerce-MyAccount-navigation-link.is-active {
+  > a {
+    color: $body-color;
+  }
 }
 
 /**
   Custom added styles
  */
+.woocommerce-EditAccountForm,
+.woocommerce-address-fields__field-wrapper,
 .woocommerce-shipping-fields__field-wrapper,
 .woocommerce-billing-fields__field-wrapper {
   display: grid;
@@ -328,8 +362,17 @@
   margin-bottom: 1rem;
   grid-auto-flow: dense;
 
-  .form-row {
+  > * {
     grid-column: span 12;
+  }
+
+  legend {
+    @extend .title !optional;
+    @extend .title.is-4 !optional;
+  }
+
+  .clear {
+    display: none;
   }
 }
 

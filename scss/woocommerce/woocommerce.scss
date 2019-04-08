@@ -102,13 +102,10 @@ p.demo_store,
 	 * Product Page
 	 */
 	div.product {
-		margin-bottom: 0;
 		position: relative;
 
 		.product_title {
-			clear: none;
-			margin-top: 0;
-			padding: 0;
+      @extend .title !optional;
 		}
 
 		span.price,
@@ -145,8 +142,6 @@ p.demo_store,
 		}
 
 		div.images {
-			margin-bottom: 2em;
-
 			img {
 				display: block;
 				width: 100%;
@@ -268,10 +263,6 @@ p.demo_store,
 			.flex-control-thumbs li:nth-child(5n+1) {
 				clear: left;
 			}
-		}
-
-		div.summary {
-			margin-bottom: 2em;
 		}
 
 		div.social {
@@ -983,13 +974,10 @@ p.demo_store,
 		text-align: left;
 		width: 100%;
 
-
-
     .product-subtotal {
       text-align: right;
       font-weight: $weight-bold;
     }
-
 
 		th {
 			padding: .5rem .5rem;
@@ -1050,7 +1038,7 @@ p.demo_store,
 		}
 
 		.button {
-			white-space: nowrap;
+      @extend .button.is-small;
 		}
 
 		.order-actions {
@@ -1435,7 +1423,7 @@ p.demo_store,
 	ul.order_details {
 
 		@include clearfix();
-		margin: 0 0 3em;
+    margin-bottom: 2rem;
 		list-style: none;
 
 		li {
@@ -1461,6 +1449,10 @@ p.demo_store,
 				border: none;
 			}
 		}
+
+    & + p {
+      margin-bottom: 2rem;
+    }
 	}
 
 	.wc-bacs-bank-details-account-name {
@@ -1477,18 +1469,13 @@ p.demo_store,
 		}
 	}
 
-	.woocommerce-customer-details {
+  .shop_table.order_details {
+    margin-bottom: 2rem;
+  }
 
+	.woocommerce-customer-details {
 		address {
-			font-style: normal;
-			margin-bottom: 0;
-			border: $woocommerce-border-default;
-			border-bottom-width: 2px;
-			border-right-width: 2px;
-			text-align: left;
-			width: 100%;
-			border-radius: 5px;
-			padding: 6px 12px;
+
 		}
 
 		.woocommerce-customer-details--phone,
@@ -1513,6 +1500,14 @@ p.demo_store,
 			position: absolute;
 		}
 	}
+
+  .woocommerce-order-details__title {
+    @extend .title !optional;
+  }
+  .woocommerce-column__title {
+    @extend .title !optional;
+    @extend .title.is-4 !optional;
+  }
 
 	/**
 	 * Layered nav widget
@@ -1695,6 +1690,7 @@ p.demo_store,
 	}
 }
 
+.woocommerce-notice,
 .woocommerce-message,
 .woocommerce-error,
 .woocommerce-info {
@@ -1739,6 +1735,7 @@ p.demo_store,
 	unicode-bidi: embed;
 }
 
+.woocommerce-notice,
 .woocommerce-message {
   @extend .notification.is-success !optional;
 	&::before {
@@ -1768,24 +1765,28 @@ p.demo_store,
 .woocommerce-account {
 
 	.woocommerce {
-
 		@include clearfix();
 	}
 
 	.addresses .title {
-
-		@include clearfix();
+    @include clearfix();
 
 		h3 {
 			float: left;
 		}
 
 		.edit {
-			float: right;
+      font-size: .8rem;
+      vertical-align: super;
+      margin-left: 1em;
 		}
 	}
 
-	ol.commentlist.notes li.note {
+  .woocommerce-Address-title {
+    margin-bottom: 0;
+  }
+
+  ol.commentlist.notes li.note {
 
 		p.meta {
 			font-weight: 700;
