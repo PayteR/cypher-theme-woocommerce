@@ -53,62 +53,19 @@
 	#content div.product {
     display: grid;
     grid-gap: $woocommerce-product-grid-gap;
+    grid-template-columns: 1fr;
+    grid-template-areas: "images"
+                         "content"
+                         "tabs";
     @include from($woocommerce-smallscreen-breakpoint) {
-      grid-template-columns: 400px 1fr;
+      grid-template-columns: minmax(180px, 400px) 1fr;
       grid-template-areas: "images content"
                            "tabs   tabs";
     }
 
-
 		div.images {
       grid-area: images;
-			//float: left;
-			//width: 48%;
-		}
 
-		div.thumbnails {
-			@include clearfix();
-
-			a {
-				float: left;
-				width: 30.75%;
-				margin-right: 3.8%;
-				margin-bottom: 1em;
-			}
-
-			a.last {
-				margin-right: 0;
-			}
-
-			a.first {
-				clear: both;
-			}
-
-			&.columns-1 {
-				a {
-					width: 100%;
-					margin-right: 0;
-					float: none;
-				}
-			}
-
-			&.columns-2 {
-				a {
-					width: 48%;
-				}
-			}
-
-			&.columns-4 {
-				a {
-					width: 22.05%;
-				}
-			}
-
-			&.columns-5 {
-				a {
-					width: 16.9%;
-				}
-			}
 		}
 
 		div.summary {
@@ -120,6 +77,10 @@
 
     .woocommerce-product-details__short-description {
       @extend .content !optional;
+    }
+
+    .single_add_to_cart_button {
+      @extend .button.is-primary;
     }
 
 		.woocommerce-tabs {
@@ -135,9 +96,23 @@
 				@include mediaright();
 			}
 		}
-
-
 	}
+
+  .woocommerce-product-gallery__wrapper {
+    display: grid;
+    grid-gap: $woocommerce-product-gallery-gap;
+    grid-template-columns: repeat($woocommerce-product-gallery-columns, 1fr);
+  }
+
+  .woocommerce-product-gallery__image {
+    &:first-child {
+      grid-column: span $woocommerce-product-gallery-columns;
+    }
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
 
 	/**
 	 * Product loops
@@ -301,16 +276,20 @@
 		//	}
 		//}
 
-		.wc-terms-and-conditions, .terms {
-			text-align: left;
-			padding: 0 1em 0 0;
-			//float:left;
-		}
-
-		#place_order {
-      margin-top: 1rem;
-		}
 	}
+
+  .wc-terms-and-conditions, .terms {
+    text-align: left;
+    padding: 0 1em 0 0;
+    //float:left;
+  }
+
+  #place_order {
+    margin-top: 1rem;
+    &.button {
+      @extend .button.is-primary;
+    }
+  }
 
 	.woocommerce-terms-and-conditions {
 		margin-bottom: 1.618em;
@@ -373,6 +352,10 @@
 
   .clear {
     display: none;
+  }
+
+  .button {
+    @extend .button.is-primary !optional;
   }
 }
 
