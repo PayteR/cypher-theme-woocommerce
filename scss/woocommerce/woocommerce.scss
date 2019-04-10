@@ -2302,8 +2302,10 @@ p.demo_store,
   New custom for Cypher
  */
 
-.button.wc-backward {
-  @extend .button.is-light !optional;
+.return-to-shop{
+  .button {
+    @extend .button.is-light !optional;
+  }
 }
 
 .woocommerce-products-header {
