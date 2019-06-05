@@ -3909,10 +3909,6 @@ p.demo_store a,
   display: inline;
 }
 
-.woocommerce ul#shipping_method .amount {
-  font-weight: 700;
-}
-
 .woocommerce p.woocommerce-shipping-contents {
   margin: 0;
 }

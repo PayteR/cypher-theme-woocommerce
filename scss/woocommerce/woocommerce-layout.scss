@@ -16,6 +16,7 @@
 	.woocommerce-message,
 	.woocommerce-error,
 	.woocommerce-info {
+    margin-left: 0;
 		.button {
 			float: right;
 		}
@@ -343,6 +344,10 @@
 
   > * {
     grid-column: span 12;
+  }
+
+  p.form-row {
+    margin-bottom: 0;
   }
 
   legend {

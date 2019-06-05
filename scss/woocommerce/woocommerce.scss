@@ -1261,6 +1261,10 @@ p.demo_store,
 	.widget_shopping_cart {
     min-width: 220px;
 
+    .widgettitle {
+      display: none;
+    }
+
 		.total {
 			border-top: 3px double $woocommerce-secondary-color;
 			padding: 4px 0 0;
