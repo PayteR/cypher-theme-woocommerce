@@ -8,7 +8,7 @@
  * Style begins
  */
   .woocommerce
-  //.woocommerce-page  // maybe uncomment later
+    //.woocommerce-page  // maybe uncomment later
   {
 
     table.shop_table_responsive {
@@ -17,12 +17,10 @@
       }
 
       .cart_item {
+        display: block;
         position: relative;
         clear: both;
         border-bottom: $woocommerce-border-default;
-        &:first-child {
-          border-top: $woocommerce-border-default;
-        }
       }
 
       .product-remove {
