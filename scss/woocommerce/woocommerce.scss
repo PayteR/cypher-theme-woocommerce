@@ -1504,9 +1504,18 @@ p.demo_store,
   ul.order_details {
 
     @include clearfix();
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-left: 0;
     list-style: none;
+
+
+    > .email,
+    > .order,
+    > .date,
+    > .total,
+    > .order {
+      margin-bottom: 1rem;
+    }
 
     li {
       float: left;
